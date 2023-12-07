@@ -44,3 +44,11 @@
 .read-the-docs {
   color: #888;
 } */
+
+
+      @media (min-width: 992px) {
+        .rotate-lg-6 {
+          transform: rotate(3deg);
+        }
+      }
+    

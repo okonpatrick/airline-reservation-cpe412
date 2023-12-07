@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+      @media (min-width: 992px) {
+        .rotate-lg-6 {
+          transform: rotate(3deg);
+        }
+      }

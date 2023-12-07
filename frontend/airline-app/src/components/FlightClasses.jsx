@@ -2,9 +2,9 @@
 export default function FlightClasses() {
   return (
     <div>
-<div className="container my-24 mx-auto md:px-6">
-  <section className="mb-32">
-    <h2 className="mb-12 text-center text-3xl font-bold">Classes</h2>
+<div className="container my-20 mx-auto md:px-6">
+  <section className="mb-10">
+    <h2 className="mb-8 text-orange-500 text-center text-3xl font-bold">CLASSES</h2>
 
     <div className="grid gap-6 lg:grid-cols-3 lg:gap-x-12">
       <div className="mb-6 lg:mb-0">
