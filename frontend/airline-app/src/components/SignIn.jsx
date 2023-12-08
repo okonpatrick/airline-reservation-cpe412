@@ -22,24 +22,8 @@ export default function SignIn() {
     setPassword('');
   };
 
-  const handleLogout = () => {
-    setLoggedInUser(null);
-  };
-
     return (
       <div>
-       {loggedInUser ? (
-        <div>
-          <p>Hello, <DisplayUsername loggedInUser={loggedInUser} /></p>
-          
-          <button onClick={handleLogout}>Logout</button>
-        </div>
-      ) : (
-        <div>
-          
-        </div>
-      )}
-
       <div className="flex justify-center items-center h-screen pb-40">
         <div className="mt-10 relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
           <div className="relative grid mx-4 mb-4 -mt-6 overflow-hidden text-white shadow-lg h-28 place-items-center rounded-xl bg-gradient-to-tr from-purple-700 to-pink-400 bg-clip-border shadow-purple-700/40">

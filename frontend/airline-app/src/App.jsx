@@ -7,7 +7,7 @@ import FlightClasses from './components/FlightClasses';
 import AvailableFlights from "./components/AvailableFlights"
 import Footer from './components/Footer';
 import Newsletter from './components/Newsletter';
-import {Router, Routes, Route, useNavigate} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import FlightDashboard from './components/FlightDashboard';
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignuP";

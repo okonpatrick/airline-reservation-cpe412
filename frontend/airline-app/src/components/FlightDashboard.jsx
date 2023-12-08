@@ -2,10 +2,6 @@ import BookFlight from "./BookFlight";
 import newsletter2 from "../assets/newsletter2.jpg";
 import newsletter3 from "../assets/newsletter3.jpg";
 import newsletter4 from "../assets/newsletter4.jpg";
-import newsletter5 from "../assets/newsletter5.jpg";
-import newsletter6 from "../assets/newsletter6.jpg";
-import newsletter7 from "../assets/newsletter7.jpg";
-import newsletter8 from "../assets/newsletter8.jpg";
 
 export default function FlightDashboard() {
 
