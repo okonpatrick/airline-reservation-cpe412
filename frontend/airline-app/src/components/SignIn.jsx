@@ -26,7 +26,7 @@ export default function SignIn() {
       <div>
       <div className="flex justify-center items-center h-screen pb-40">
         <div className="mt-10 relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
-          <div className="relative grid mx-4 mb-4 -mt-6 overflow-hidden text-white shadow-lg h-28 place-items-center rounded-xl bg-gradient-to-tr from-purple-700 to-pink-400 bg-clip-border shadow-purple-700/40">
+          <div className="relative grid mx-4 mb-4 -mt-6 overflow-hidden text-white shadow-lg h-28 place-items-center rounded-xl bg-gradient-to-tr from-orange-700 to-orange-400 bg-clip-border shadow-orange-500/40">
             <h3 className="block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-white">
               Sign In
             </h3>
@@ -34,7 +34,7 @@ export default function SignIn() {
           <div className="flex flex-col gap-4 p-6">
             <div className="relative h-11 w-full min-w-[200px]">
               <input
-                className="w-full h-full px-3 py-3 font-sans text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                className="w-full h-full px-3 py-3 font-sans text-sm font-normal transition-all bg-transparent border rounded-md peer border-orange-gray-200 border-t-transparent text-orange-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-orange-gray-50"
                 placeholder=" "
                 value={username} onChange={e => setUsername(e.target.value)}
              
@@ -46,7 +46,7 @@ export default function SignIn() {
             </div>
             <div className="relative h-11 w-full min-w-[200px]">
               <input type="password"
-                className="w-full h-full px-3 py-3 font-sans text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                className="w-full h-full px-3 py-3 font-sans text-sm font-normal transition-all bg-transparent border rounded-md peer border-blue-gray-200 border-t-transparent text-blue-gray-700 outline outline-0 placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-orange-gray-50"
                 placeholder=" " 
                 value={password} onChange={e => setPassword(e.target.value)} 
               />
@@ -94,7 +94,7 @@ export default function SignIn() {
           </div>
           <div className="p-6 pt-0">
             <button
-              className="block w-full select-none rounded-lg bg-gradient-to-tr from-purple-600 to-pink-300 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              className="block w-full select-none rounded-lg bg-gradient-to-tr from-orange-600 to-orange-300 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="submit"
               data-ripple-light="true" 
               onClick={handleLogin}
@@ -105,7 +105,7 @@ export default function SignIn() {
               Don't have an account?
               <a
                 href="#signup"
-                className="block ml-1 font-sans text-sm antialiased font-bold leading-normal text-purple-500"
+                className="block ml-1 font-sans text-sm antialiased font-bold leading-normal text-orange-500"
               >
                 Sign up
               </a>

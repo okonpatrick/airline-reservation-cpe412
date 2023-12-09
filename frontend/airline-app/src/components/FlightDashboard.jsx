@@ -67,10 +67,10 @@ export default function FlightDashboard() {
                     </div>
                 </td>
                 <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    $599
+                     10.00am UTC
                 </td>
                 <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    $2499
+                2.00pm UTC
                 </td>
                 <td className="px-6 py-4">
                     <a href="#" className="font-medium text-green-600 dark:text-red-500 hover:underline">Pay Now!</a>
@@ -102,10 +102,10 @@ export default function FlightDashboard() {
                     </div>
                 </td>
                 <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    $2499
+                1.00pm UTC
                 </td>
                 <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    $2499
+                3.00pm UTC
                 </td>
                 <td className="px-6 py-4">
                     <a href="#" className="font-medium text-green-600 dark:text-red-500 hover:underline">Pay Now!</a>
@@ -138,10 +138,10 @@ export default function FlightDashboard() {
                     </div>
                 </td>
                 <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    2.00pmGMT
+                11.00am UTC
                 </td>
                 <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-                    $2499
+                1.00pm UTC
                 </td>
                 <td className="px-6 py-4">
                     <a href="#" className="font-medium text-green-600 dark:text-red-500 hover:underline">Pay Now!</a>
