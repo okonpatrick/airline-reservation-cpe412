@@ -12,7 +12,9 @@ export default function AvailableFlights() {
 
   const navigateToFlights = () => {
     // 👇️ navigate to /flights
-    navigate('/flights');
+    navigate('/flights/1');
+    //window.location.href = 'http://localhost:5173/flights/1'; // Replace with the actual URL
+
     console.log('From:', from);
     console.log('To:', to);
     console.log('Date:', date);

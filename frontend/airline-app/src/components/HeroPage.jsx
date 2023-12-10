@@ -1,5 +1,19 @@
-import airbusImage from "../assets/airbus-image.jpg"
+import airbusImage from "../assets/airbus-image.jpg";
+import { Link } from 'react-router-dom';
+import FlightClasses from "./FlightClasses";
+import Newsletter from "./Newsletter";
+import Footer from "./Footer";
+import AvailableFlights from "./AvailableFlights";
+import { Routes, Route } from 'react-router-dom';
+import FlightDashboard from "./FlightDashboard";
+import SignIn from "./SignIn";
+
+
 export default function HeroPage() {
+  function redirectToSignIn() {
+    window.location.href = 'http://localhost:5173/signin'; // Replace with the actual URL
+
+  }
   return (
     <div>
 <section className="mb-0" >
@@ -80,8 +94,9 @@ export default function HeroPage() {
     <div className="my-1 flex items-center lg:my-0 lg:ml-auto">
       <button type="button"
         className="bg-white mr-2 inline-block rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-orange-500 transition duration-150 ease-in-out hover:bg-neutral-500 hover:bg-opacity-10 hover:text-white focus:text-blue-600 focus:outline-none focus:ring-0 active:text-primary-700 dark:text-blue-400 dark:hover:bg-neutral-700 dark:hover:bg-opacity-60 dark:hover:text-primary-500 dark:focus:text-blue-500 dark:active:text-blue-600"
-        data-te-ripple-init data-te-ripple-color="light" href="/signin">
+        data-te-ripple-init data-te-ripple-color="light" href="/signin" onClick={redirectToSignIn}>
         Login
+      
       </button>
       <button type="button"
         className="underline inline-block rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_black] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
@@ -111,6 +126,14 @@ export default function HeroPage() {
   </div>
 </div>
 </section>
+<AvailableFlights/>
+<Routes>
+        <Route path="/flights" element={<FlightDashboard />} />
+</Routes>
+<FlightClasses />
+        <Newsletter />
+        <Footer />
     </div>
+    
   )
 }
