@@ -5,7 +5,6 @@ import { Routes, Route } from 'react-router-dom';
 import HeroPage from './components/HeroPage';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
-import BookFlight from './components/BookFlight';
 import AvailableFlights from './components/AvailableFlights';
 import FlightDashboard from './components/FlightDashboard';
 
@@ -31,12 +30,8 @@ function App() {
         <Route path="/" element={<HeroPage />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/flights" element={<AvailableFlights />} />
-
-
-          <Route path="/flights/1" element={<CombinedFlights />} />
-
-
+          <Route path="/flights" element={<CombinedFlights />} />
+          {/* <Route path="/flights/1" element={<CombinedFlights />} /> */}
         </Routes>
       </div>
     </>
