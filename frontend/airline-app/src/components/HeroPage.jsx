@@ -10,6 +10,9 @@ export default function HeroPage() {
   function redirectToSignIn() {
     window.location.href = "http://localhost:5173/signin"; // Replace with the actual URL
   }
+  function redirectToSignUp() {
+    window.location.href = "http://localhost:5173/signup"; // Replace with the actual URL
+  }
   return (
     <div>
       <section className="mb-0">
@@ -177,7 +180,7 @@ export default function HeroPage() {
                 data-te-ripple-color="light"
                 href="/signin"
                 onClick={redirectToSignIn}
-              >
+                >
                 Login
               </button>
               <button
@@ -186,6 +189,7 @@ export default function HeroPage() {
                 data-te-ripple-init
                 data-te-ripple-color="light"
                 href="/signup"
+                onClick={redirectToSignUp}
               >
                 Sign up
               </button>

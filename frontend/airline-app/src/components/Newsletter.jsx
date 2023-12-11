@@ -1,6 +1,10 @@
 import newsletterImage from "../assets/newsletter11.jpg";
 
 export default function Newsletter() {
+
+  function newsletterSubmit() {
+    alert("Thank you for subscribing!")
+  }
   return (
     <div><div className="container my-4 mx-auto md:px-6">
   <section className="mb-5 text-center lg:text-left">
@@ -25,7 +29,7 @@ export default function Newsletter() {
                 </div>
                 <button type="submit"
                   className="inline-block rounded bg-orange-500 px-7 pt-3 pb-2.5 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
-                  data-te-ripple-init data-te-ripple-color="light">
+                  data-te-ripple-init data-te-ripple-color="light" onClick={newsletterSubmit}>
                   Subscribe
                 </button>
               </div>
