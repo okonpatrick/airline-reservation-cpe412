@@ -4,6 +4,7 @@ export default function SignUp() {
     window.location.href = "http://localhost:5173/signin"; // Replace with the actual URL
   }
 
+  
     return (
       <div className="flex justify-center items-center h-screen pb-40">
         <div className="p-5 space-y-4 md:space-y-6 sm:p-8">

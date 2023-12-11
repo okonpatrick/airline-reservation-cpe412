@@ -5,6 +5,10 @@ export default function SignIn() {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  
+  function handleSignIn() {
+    window.location.href = "http://localhost:5173/signin"; // Replace with the actual URL
+  }
 
   const handleLogin = () => {
     // Check if both username and password are provided
@@ -13,6 +17,7 @@ export default function SignIn() {
       return;
     }
 
+ 
     // Create a new user object with the entered username and password
     const newUser = { username, password };
 
@@ -106,7 +111,7 @@ export default function SignIn() {
               <a
                 href="#signup"
                 className="block ml-1 font-sans text-sm antialiased font-bold leading-normal text-orange-500"
-              >
+              onClick={handleSignIn}>
                 Sign up
               </a>
             </p>
