@@ -1,4 +1,4 @@
-const dbConfig = require('./config')
+const dbConfig = require("./config");
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
@@ -17,6 +17,11 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.flieght = require('./flieght')(sequelize, Sequelize);
+// Load models
+db.Passenger = require("./passenger.js")(sequelize, Sequelize);
+db.Flight = require("./flight.js")(sequelize, Sequelize);
+db.Aircraft = require("./aircraft.js")(sequelize, Sequelize);
+db.Airport = require("./airport.js")(sequelize, Sequelize);
+db.Ticket = require("./ticket.js")(sequelize, Sequelize);
 
 module.exports = db;

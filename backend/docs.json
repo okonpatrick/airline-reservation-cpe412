@@ -1,0 +1,305 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Airport Management API",
+    "description": "API documentation for managing passengers, flights, aircraft, airports, and tickets.",
+    "version": "1.0.0"
+  },
+  "basePath": "/api",
+  "paths": {
+    "/passengers": {
+      "get": {
+        "summary": "Get a list of all passengers",
+        "responses": { "200": { "description": "Successful response" } }
+      },
+      "post": {
+        "summary": "Create a new passenger",
+        "responses": {
+          "201": { "description": "Passenger created successfully" }
+        }
+      }
+    },
+    "/passengers/{id}": {
+      "get": {
+        "summary": "Get details of a specific passenger",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "404": { "description": "Passenger not found" }
+        }
+      },
+      "put": {
+        "summary": "Update details of a specific passenger",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Passenger" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Passenger updated successfully" },
+          "404": { "description": "Passenger not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a specific passenger",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" }
+        ],
+        "responses": {
+          "204": { "description": "Passenger deleted successfully" },
+          "404": { "description": "Passenger not found" }
+        }
+      }
+    },
+    "/flights": {
+      "get": {
+        "summary": "Get a list of all flights",
+        "responses": { "200": { "description": "Successful response" } }
+      },
+      "post": {
+        "summary": "Create a new flight",
+        "responses": { "201": { "description": "Flight created successfully" } }
+      }
+    },
+    "/flights/{id}": {
+      "get": {
+        "summary": "Get details of a specific flight",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "404": { "description": "Flight not found" }
+        }
+      },
+      "put": {
+        "summary": "Update details of a specific flight",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Flight" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Flight updated successfully" },
+          "404": { "description": "Flight not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a specific flight",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" }
+        ],
+        "responses": {
+          "204": { "description": "Flight deleted successfully" },
+          "404": { "description": "Flight not found" }
+        }
+      }
+    },
+    "/aircraft": {
+      "get": {
+        "summary": "Get a list of all aircraft",
+        "responses": { "200": { "description": "Successful response" } }
+      },
+      "post": {
+        "summary": "Create a new aircraft",
+        "responses": {
+          "201": { "description": "Aircraft created successfully" }
+        }
+      }
+    },
+    "/aircraft/{id}": {
+      "get": {
+        "summary": "Get details of a specific aircraft",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "404": { "description": "Aircraft not found" }
+        }
+      },
+      "put": {
+        "summary": "Update details of a specific aircraft",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Aircraft" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Aircraft updated successfully" },
+          "404": { "description": "Aircraft not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a specific aircraft",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" }
+        ],
+        "responses": {
+          "204": { "description": "Aircraft deleted successfully" },
+          "404": { "description": "Aircraft not found" }
+        }
+      }
+    },
+    "/airports": {
+      "get": {
+        "summary": "Get a list of all airports",
+        "responses": { "200": { "description": "Successful response" } }
+      },
+      "post": {
+        "summary": "Create a new airport",
+        "responses": {
+          "201": { "description": "Airport created successfully" }
+        }
+      }
+    },
+    "/airports/{code}": {
+      "get": {
+        "summary": "Get details of a specific airport",
+        "parameters": [
+          { "name": "code", "in": "path", "required": true, "type": "string" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "404": { "description": "Airport not found" }
+        }
+      },
+      "put": {
+        "summary": "Update details of a specific airport",
+        "parameters": [
+          { "name": "code", "in": "path", "required": true, "type": "string" },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Airport" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Airport updated successfully" },
+          "404": { "description": "Airport not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a specific airport",
+        "parameters": [
+          { "name": "code", "in": "path", "required": true, "type": "string" }
+        ],
+        "responses": {
+          "204": { "description": "Airport deleted successfully" },
+          "404": { "description": "Airport not found" }
+        }
+      }
+    },
+    "/tickets": {
+      "get": {
+        "summary": "Get a list of all tickets",
+        "responses": { "200": { "description": "Successful response" } }
+      },
+      "post": {
+        "summary": "Create a new ticket",
+        "responses": { "201": { "description": "Ticket created successfully" } }
+      }
+    },
+    "/tickets/{id}": {
+      "get": {
+        "summary": "Get details of a specific ticket",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" }
+        ],
+        "responses": {
+          "200": { "description": "Successful response" },
+          "404": { "description": "Ticket not found" }
+        }
+      },
+      "put": {
+        "summary": "Update details of a specific ticket",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": { "$ref": "#/definitions/Ticket" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Ticket updated successfully" },
+          "404": { "description": "Ticket not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a specific ticket",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "type": "integer" }
+        ],
+        "responses": {
+          "204": { "description": "Ticket deleted successfully" },
+          "404": { "description": "Ticket not found" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Passenger": {
+      "type": "object",
+      "properties": {
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" }
+      },
+      "required": ["firstName", "lastName", "email", "phone"]
+    },
+    "Flight": {
+      "type": "object",
+      "properties": {
+        "departureDateTime": { "type": "string", "format": "date-time" },
+        "arrivalDateTime": { "type": "string", "format": "date-time" },
+        "aircraftId": { "type": "integer" }
+      },
+      "required": ["departureDateTime", "arrivalDateTime", "aircraftId"]
+    },
+    "Aircraft": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "model": { "type": "string" },
+        "capacity": { "type": "integer" }
+      },
+      "required": ["name", "model", "capacity"]
+    },
+    "Airport": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "code": { "type": "string" },
+        "location": { "type": "string" }
+      },
+      "required": ["name", "code", "location"]
+    },
+    "Ticket": {
+      "type": "object",
+      "properties": {
+        "passengerId": { "type": "integer" },
+        "flightId": { "type": "integer" },
+        "seatNumber": { "type": "string" }
+      },
+      "required": ["passengerId", "flightId", "seatNumber"]
+    }
+  }
+}
