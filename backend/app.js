@@ -5,6 +5,7 @@ const swaggerUi = require("swagger-ui-express");
 
 const routes = require("./routes/routes");
 
+app.use(express.json());
 app.use(cors());
 
 // import doc
@@ -14,6 +15,10 @@ const swaggerDoc = require("./docs.json");
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 app.use("/api", routes);
+
+app.get("/", (req, res) => {
+  res.send("eH Choke");
+});
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

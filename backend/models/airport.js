@@ -9,7 +9,6 @@ module.exports = (sequelize, Sequelize) => {
     country: {
       type: Sequelize.STRING,
     },
-    // ... other attributes
   });
 
   Airport.associate = (models) => {

@@ -6,7 +6,6 @@ module.exports = (sequelize, Sequelize) => {
     arrivalDateTime: {
       type: Sequelize.DATE,
     },
-    // ... other attributes
   });
 
   Flight.associate = (models) => {
